@@ -13,7 +13,8 @@ function App() {
     const [editingId, setEditingId] = useState(null);
 
     // The base URL of our backend API
-    const API_URL = `${VITE_API_URL}/notes`;
+    const API_URL = `${import.meta.env.VITE_API_URL}/notes`;
+
 
     // useEffect runs when the component first loads to fetch all notes
     useEffect(() => {
