@@ -11,7 +11,10 @@ const app = express();
 
 // Middleware
 // cors() allows our React frontend to request data from this backend without security errors.
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+  origin: process.env.FRONTEND_URL,
+}));
 // express.json() converts incoming request bodies (which are in JSON format) into JavaScript objects.
 app.use(express.json());
 
